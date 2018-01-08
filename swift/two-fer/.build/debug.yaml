@@ -1,0 +1,65 @@
+client:
+  name: swift-build
+tools: {}
+targets:
+  "main": ["<TwoFer.module>"]
+  "test": ["<TwoFer.module>","<TwoFerTests.module>","<TwoFerPackageTests.test>"]
+  "TwoFer.module": ["<TwoFer.module>"]
+  "TwoFerTests.module": ["<TwoFerTests.module>"]
+  "TwoFerPackageTests.test": ["<TwoFerPackageTests.test>"]
+default: "main"
+commands: 
+  "<C.TwoFer.module>":
+    tool: phony
+    inputs: ["/Users/benjamin.hall/exercism/swift/two-fer/.build/x86_64-apple-macosx10.10/debug/TwoFer.swiftmodule"]
+    outputs: ["<TwoFer.module>"]
+
+  "<C.TwoFerPackageTests.test>":
+    tool: phony
+    inputs: ["/Users/benjamin.hall/exercism/swift/two-fer/.build/x86_64-apple-macosx10.10/debug/TwoFerPackageTests.xctest/Contents/MacOS/TwoFerPackageTests"]
+    outputs: ["<TwoFerPackageTests.test>"]
+
+  "<C.TwoFerTests.module>":
+    tool: phony
+    inputs: ["/Users/benjamin.hall/exercism/swift/two-fer/.build/x86_64-apple-macosx10.10/debug/TwoFerTests.swiftmodule"]
+    outputs: ["<TwoFerTests.module>"]
+
+  "C.TwoFer.module":
+    tool: swift-compiler
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "TwoFer"
+    module-output-path: "/Users/benjamin.hall/exercism/swift/two-fer/.build/x86_64-apple-macosx10.10/debug/TwoFer.swiftmodule"
+    inputs: ["/Users/benjamin.hall/exercism/swift/two-fer/Sources/TwoFer.swift"]
+    outputs: ["/Users/benjamin.hall/exercism/swift/two-fer/.build/x86_64-apple-macosx10.10/debug/TwoFer.build/TwoFer.swift.o","/Users/benjamin.hall/exercism/swift/two-fer/.build/x86_64-apple-macosx10.10/debug/TwoFer.swiftmodule"]
+    import-paths: ["/Users/benjamin.hall/exercism/swift/two-fer/.build/x86_64-apple-macosx10.10/debug"]
+    temps-path: "/Users/benjamin.hall/exercism/swift/two-fer/.build/x86_64-apple-macosx10.10/debug/TwoFer.build"
+    objects: ["/Users/benjamin.hall/exercism/swift/two-fer/.build/x86_64-apple-macosx10.10/debug/TwoFer.build/TwoFer.swift.o"]
+    other-args: ["-swift-version","3","-target","x86_64-apple-macosx10.10","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Onone","-g","-enable-testing","-j8","-DSWIFT_PACKAGE","-module-cache-path","/Users/benjamin.hall/exercism/swift/two-fer/.build/x86_64-apple-macosx10.10/debug/ModuleCache"]
+    sources: ["/Users/benjamin.hall/exercism/swift/two-fer/Sources/TwoFer.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: "8"
+
+  "C.TwoFerPackageTests.test":
+    tool: shell
+    description: "Linking ./.build/x86_64-apple-macosx10.10/debug/TwoFerPackageTests.xctest/Contents/MacOS/TwoFerPackageTests"
+    inputs: ["/Users/benjamin.hall/exercism/swift/two-fer/.build/x86_64-apple-macosx10.10/debug/TwoFer.build/TwoFer.swift.o","/Users/benjamin.hall/exercism/swift/two-fer/.build/x86_64-apple-macosx10.10/debug/TwoFerTests.build/TwoFerTests.swift.o"]
+    outputs: ["/Users/benjamin.hall/exercism/swift/two-fer/.build/x86_64-apple-macosx10.10/debug/TwoFerPackageTests.xctest/Contents/MacOS/TwoFerPackageTests"]
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-target","x86_64-apple-macosx10.10","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-g","-L","/Users/benjamin.hall/exercism/swift/two-fer/.build/x86_64-apple-macosx10.10/debug","-o","/Users/benjamin.hall/exercism/swift/two-fer/.build/x86_64-apple-macosx10.10/debug/TwoFerPackageTests.xctest/Contents/MacOS/TwoFerPackageTests","-module-name","TwoFerPackageTests","-Xlinker","-bundle","/Users/benjamin.hall/exercism/swift/two-fer/.build/x86_64-apple-macosx10.10/debug/TwoFer.build/TwoFer.swift.o","/Users/benjamin.hall/exercism/swift/two-fer/.build/x86_64-apple-macosx10.10/debug/TwoFerTests.build/TwoFerTests.swift.o"]
+
+  "C.TwoFerTests.module":
+    tool: swift-compiler
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "TwoFerTests"
+    module-output-path: "/Users/benjamin.hall/exercism/swift/two-fer/.build/x86_64-apple-macosx10.10/debug/TwoFerTests.swiftmodule"
+    inputs: ["/Users/benjamin.hall/exercism/swift/two-fer/.build/x86_64-apple-macosx10.10/debug/TwoFer.swiftmodule","/Users/benjamin.hall/exercism/swift/two-fer/Tests/TwoFerTests/TwoFerTests.swift"]
+    outputs: ["/Users/benjamin.hall/exercism/swift/two-fer/.build/x86_64-apple-macosx10.10/debug/TwoFerTests.build/TwoFerTests.swift.o","/Users/benjamin.hall/exercism/swift/two-fer/.build/x86_64-apple-macosx10.10/debug/TwoFerTests.swiftmodule"]
+    import-paths: ["/Users/benjamin.hall/exercism/swift/two-fer/.build/x86_64-apple-macosx10.10/debug"]
+    temps-path: "/Users/benjamin.hall/exercism/swift/two-fer/.build/x86_64-apple-macosx10.10/debug/TwoFerTests.build"
+    objects: ["/Users/benjamin.hall/exercism/swift/two-fer/.build/x86_64-apple-macosx10.10/debug/TwoFerTests.build/TwoFerTests.swift.o"]
+    other-args: ["-swift-version","3","-target","x86_64-apple-macosx10.10","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Onone","-g","-enable-testing","-j8","-DSWIFT_PACKAGE","-module-cache-path","/Users/benjamin.hall/exercism/swift/two-fer/.build/x86_64-apple-macosx10.10/debug/ModuleCache"]
+    sources: ["/Users/benjamin.hall/exercism/swift/two-fer/Tests/TwoFerTests/TwoFerTests.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: "8"
+

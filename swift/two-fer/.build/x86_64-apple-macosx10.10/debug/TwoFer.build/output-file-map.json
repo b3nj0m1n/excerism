@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/benjamin.hall/exercism/swift/two-fer/.build/x86_64-apple-macosx10.10/debug/TwoFer.build/master.swiftdeps"
+  },
+  "/Users/benjamin.hall/exercism/swift/two-fer/Sources/TwoFer.swift": {
+    "dependencies": "/Users/benjamin.hall/exercism/swift/two-fer/.build/x86_64-apple-macosx10.10/debug/TwoFer.build/TwoFer.d",
+    "object": "/Users/benjamin.hall/exercism/swift/two-fer/.build/x86_64-apple-macosx10.10/debug/TwoFer.build/TwoFer.swift.o",
+    "swiftmodule": "/Users/benjamin.hall/exercism/swift/two-fer/.build/x86_64-apple-macosx10.10/debug/TwoFer.build/TwoFer~partial.swiftmodule",
+    "swift-dependencies": "/Users/benjamin.hall/exercism/swift/two-fer/.build/x86_64-apple-macosx10.10/debug/TwoFer.build/TwoFer.swiftdeps"
+  }
+}
