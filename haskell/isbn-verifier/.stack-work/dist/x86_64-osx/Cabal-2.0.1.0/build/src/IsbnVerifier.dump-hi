@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2018-01-11 22:56:12.674879 UTC
+2018-01-12 02:09:21.528738 UTC
 
 interface isbn-verifier-2.2.0.3-AfUJ5N0REZH1Orx7DSB09X:IsbnVerifier 8022
-  interface hash: f87df67785db6fe4802765b10a7602cd
-  ABI hash: 1737ddf4d5cd35cd65e9027b09b9cb50
+  interface hash: f969ae287f98975112fcb651d30e51da
+  ABI hash: 930dcbe81e70e34599a34b47ba080b7c
   export-list hash: 6aa84c372f8e433d54006363b32e5294
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 0451a77cc0d8e5d99d548d6441c7dd35
@@ -55,7 +55,7 @@ e04ff00b07230855f2bd653cafcbb8bf
 371607ab262923c2d0903ffd7cf93c87
   $wgo :: [GHC.Types.Int] -> GHC.Prim.Int# -> GHC.Types.Bool
   {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,U>, Inline: [0] -}
-ccff1465fc52c6b79700aadea0be8270
+5da1b1f9db29d214174135b27fd59f46
   isbn :: GHC.Base.String -> GHC.Types.Bool
   {- Arity: 1, Strictness: <L,1*U>,
      Unfolding: (\ (x :: GHC.Base.String) ->
@@ -71,15 +71,9 @@ ccff1465fc52c6b79700aadea0be8270
                  } in
                  case GHC.List.$wlenAcc @ GHC.Types.Int input 0# of ww2 {
                    DEFAULT -> GHC.Types.False 10# -> IsbnVerifier.$wgo input 0# }) -}
-9b4978e6654854c50ee8349366808dcb
+a455397b9dd80552a9b7da779e817494
   isbn1 :: [GHC.Types.Int]
-  {- Unfolding: (GHC.List.reverse1
-                   @ GHC.Types.Int
-                   IsbnVerifier.isbn2
-                   (GHC.Types.[] @ GHC.Types.Int)) -}
-a004aaed7e23cc8558734135729945d9
-  isbn2 :: [GHC.Types.Int]
-  {- Unfolding: (GHC.Enum.eftInt 0# 10#) -}
+  {- Unfolding: (GHC.Enum.efdInt 10# 9#) -}
 7a04484b1cf20c0b9c9f56b4321a0130
   isbn_go :: [GHC.Types.Char] -> [GHC.Types.Int]
   {- Arity: 1, Strictness: <S,1*U> -}
