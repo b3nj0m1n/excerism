@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2018-01-18 05:10:20.520624 UTC
+2018-01-18 11:15:55.994894 UTC
 
 interface rail-fence-cipher-1.0.1.2-HlyxhdlAAKQ9RYMVutvs8m:RailFenceCipher 8022
-  interface hash: 8698eba18f8ca2dedec3dbeae7002cb1
-  ABI hash: ea866b3bc565d148becb3bce6e4eae33
+  interface hash: afd4905c7001776b38f6b11d36637734
+  ABI hash: 1454815589bc93cb4b59f5d1fc180943
   export-list hash: d4ad91190c384e8e4b7ce1bec2cb2d83
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 0451a77cc0d8e5d99d548d6441c7dd35
@@ -24,8 +24,16 @@ family instance modules: base-4.10.1.0:Control.Applicative
                          base-4.10.1.0:Data.Type.Equality base-4.10.1.0:GHC.Generics
                          base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
                          base-4.10.1.0:GHC.TypeNats
+import  -/  base-4.10.1.0:Data.Foldable 9ed87455d68e87ff2b5b8725eae9897e
+import  -/  base-4.10.1.0:Data.List 4ab7fa2a1b87502b23af891a384f0506
+import  -/  base-4.10.1.0:Data.OldList 555420b092ca8cf0a8f9666bc0e07dcf
+import  -/  base-4.10.1.0:Data.Ord a6789a2a9217f3ca764324b27739797e
+import  -/  base-4.10.1.0:Data.Tuple 8fa1305aa5032ea35e2a54fa5f1e78f9
 import  -/  base-4.10.1.0:GHC.Base 782fd99b5e36f3698a26179a49afca64
+import  -/  base-4.10.1.0:GHC.List e3060fbeb44ce0038e6b4dedf2dd9cf1
+import  -/  base-4.10.1.0:GHC.Num 6e1dc5d36d99a802edb39b92bb1923b8
 import  -/  base-4.10.1.0:Prelude 31945b7d0084063347fc52506d3a4020
+import  -/  ghc-prim-0.5.1.1:GHC.Classes 93e2660065dce9329577e83d76d8f0d4
 ab880a6656aaf8fa4eda61a7c9e033c6
   $trModule :: GHC.Types.Module
   {- HasNoCafRefs, Strictness: m,
@@ -47,26 +55,128 @@ e1b3c4ad55e746ef690b67dafa2e8881
   $trModule4 :: GHC.Prim.Addr#
   {- HasNoCafRefs,
      Unfolding: ("rail-fence-cipher-1.0.1.2-HlyxhdlAAKQ9RYMVutvs8m"#) -}
-a240cd535b6c6cc8a6ba1c47b685d8b1
+8e10ea1c5b082c9d476567d2cc58abfa
+  $wxs :: GHC.Prim.Int# -> [GHC.Types.Char]
+  {- Arity: 1, Strictness: <S,1*U>, Inline: [0] -}
+a3f416edf334356d48cdb2a689d2f7e6
   decode :: GHC.Types.Int -> GHC.Base.String -> GHC.Base.String
-  {- Arity: 2, Strictness: <L,A><L,A>,
-     Unfolding: InlineRule (2, True, True)
-                (\ (a :: GHC.Types.Int) (b :: GHC.Base.String) ->
-                 RailFenceCipher.decode1) -}
-7ed5ff579ac07a850b0ede8bb910f850
+  {- Arity: 2, Strictness: <L,1*U(U)><S,1*U>,
+     Unfolding: (\ (size :: GHC.Types.Int)
+                   (encoded :: GHC.Base.String) ->
+                 let {
+                   ds :: [GHC.Types.Char]
+                   = case size of wild1 { GHC.Types.I# y ->
+                     case GHC.Prim.tagToEnum#
+                            @ GHC.Types.Bool
+                            (GHC.Prim.<# 0# y) of wild {
+                       GHC.Types.False -> GHC.Types.[] @ GHC.Types.Char
+                       GHC.Types.True -> RailFenceCipher.$wxs y } }
+                 } in
+                 letrec {
+                   go :: [GHC.Types.Char] -> [GHC.Types.Char]
+                     {- Arity: 1, Strictness: <S,1*U> -}
+                   = \ (ds1 :: [GHC.Types.Char]) ->
+                     case ds1 of wild {
+                       [] -> GHC.Types.[] @ GHC.Types.Char
+                       : y ys
+                       -> let {
+                            ys1 :: [GHC.Types.Char] = go ys
+                          } in
+                          letrec {
+                            go1 :: [GHC.Types.Char] -> [GHC.Types.Char]
+                              {- Arity: 1, Strictness: <S,1*U> -}
+                            = \ (ds2 :: [GHC.Types.Char]) ->
+                              case ds2 of wild1 {
+                                [] -> ys1
+                                : y1 ys2
+                                -> case GHC.List.elem
+                                          @ GHC.Types.Char
+                                          GHC.Classes.$fEqChar
+                                          y1
+                                          RailFenceCipher.decode1 of wild2 {
+                                     GHC.Types.False -> GHC.Types.: @ GHC.Types.Char y1 (go1 ys2)
+                                     GHC.Types.True -> go1 ys2 } }
+                          } in
+                          go1 (GHC.Types.: @ GHC.Types.Char y ds) }
+                 } in
+                 go encoded) -}
+81e4c5c55cd4fe05d65a1cc8f36fa610
   decode1 :: [GHC.Types.Char]
   {- Unfolding: (GHC.CString.unpackCString#
                    RailFenceCipher.decode2) -}
-1a31f713aceea800684250fcf9ed2cce
+b951e5bc3c2fd95c304d6dddf6266257
   decode2 :: GHC.Prim.Addr#
-  {- HasNoCafRefs,
-     Unfolding: ("You need to implement this function!"#) -}
-32785ef29e45e5ae108cca37af199028
+  {- HasNoCafRefs, Unfolding: ("."#) -}
+ffec1f777d4cfcc4460b9c4ff42b3a17
   encode :: GHC.Types.Int -> GHC.Base.String -> GHC.Base.String
-  {- Arity: 2, HasNoCafRefs, Strictness: <L,A><S,1*U>,
-     Unfolding: InlineRule (2, True, True)
-                (\ (size :: GHC.Types.Int) (decoded :: GHC.Base.String) ->
-                 decoded) -}
+  {- Arity: 2, Strictness: <L,1*U(U)><S,1*U>,
+     Unfolding: (\ (size :: GHC.Types.Int)
+                   (decoded :: GHC.Base.String) ->
+                 GHC.Base.map
+                   @ (GHC.Types.Char, GHC.Types.Int)
+                   @ GHC.Types.Char
+                   (Data.Tuple.fst @ GHC.Types.Char @ GHC.Types.Int)
+                   (Data.OldList.sortBy
+                      @ (GHC.Types.Char, GHC.Types.Int)
+                      RailFenceCipher.encode1
+                      (GHC.List.zip
+                         @ GHC.Types.Char
+                         @ GHC.Types.Int
+                         decoded
+                         (case size of wild1 { GHC.Types.I# y ->
+                          let {
+                            n :: [GHC.Types.Int]
+                            = GHC.List.reverse1
+                                @ GHC.Types.Int
+                                (GHC.Enum.eftInt 2# (GHC.Prim.-# y 1#))
+                                (GHC.Types.[] @ GHC.Types.Int)
+                          } in
+                          case GHC.Prim.tagToEnum#
+                                 @ GHC.Types.Bool
+                                 (GHC.Prim.># 1# y) of wild {
+                            GHC.Types.False
+                            -> letrec {
+                                 go :: GHC.Prim.Int# -> [GHC.Types.Int]
+                                   {- Arity: 1, Strictness: <L,U> -}
+                                 = \ (x :: GHC.Prim.Int#) ->
+                                   GHC.Types.:
+                                     @ GHC.Types.Int
+                                     (GHC.Types.I# x)
+                                     (case GHC.Prim.tagToEnum#
+                                             @ GHC.Types.Bool
+                                             (GHC.Prim.==# x y) of wild2 {
+                                        GHC.Types.False -> go (GHC.Prim.+# x 1#)
+                                        GHC.Types.True -> n })
+                               } in
+                               case go 1# of wild2 {
+                                 [] -> GHC.List.cycle1 @ GHC.Types.Int
+                                 : ipv ipv1
+                                 -> letrec {
+                                      xs' :: [GHC.Types.Int] = GHC.Base.++ @ GHC.Types.Int wild2 xs'
+                                    } in
+                                    xs' }
+                            GHC.Types.True
+                            -> case n of wild2 {
+                                 [] -> GHC.List.cycle1 @ GHC.Types.Int
+                                 : ipv ipv1
+                                 -> letrec {
+                                      xs' :: [GHC.Types.Int] = GHC.Base.++ @ GHC.Types.Int wild2 xs'
+                                    } in
+                                    xs' } } })))) -}
+4003cdda29322a60246d18b232e39368
+  encode1 ::
+    (GHC.Types.Char, GHC.Types.Int)
+    -> (GHC.Types.Char, GHC.Types.Int) -> GHC.Types.Ordering
+  {- Arity: 2, HasNoCafRefs,
+     Strictness: <S(LS(S)),1*U(A,1*U(U))><S(LS(S)),1*U(A,1*U(U))>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (x :: (GHC.Types.Char, GHC.Types.Int))
+                   (y :: (GHC.Types.Char, GHC.Types.Int))[OneShot] ->
+                 case x of wild { (,) ds1 y1 ->
+                 case y1 of wild1 { GHC.Types.I# x# ->
+                 case y of wild2 { (,) ds2 y2 ->
+                 case y2 of wild3 { GHC.Types.I# y# ->
+                 GHC.Classes.compareInt# x# y# } } } }) -}
 vectorised variables:
 vectorised tycons:
 vectorised reused tycons:
