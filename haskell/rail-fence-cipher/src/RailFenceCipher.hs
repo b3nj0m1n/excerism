@@ -14,14 +14,7 @@ rows :: Int -> [Int]
 rows t = [1..t] ++ (reverse [2..t-1])
 
 decode :: Int -> String -> String
-decode size encoded = removeDot (t size encoded)
+decode size encoded = map fst (sortBy (comparing snd) (zip encoded (positions size encoded)))
 
-t :: Int -> String -> String
-t size encoded = concat (map (: space  size) encoded)
-
-space :: Int -> String
-space i = concat (replicate i ".")
-
-
-removeDot :: String -> String
-removeDot xs = [ x | x <- xs, not (x `elem` ".") ]
+positions :: Int -> String -> [Int]
+positions i s = map fst (sortBy (comparing  snd) (take (length s) (zip [1..] (cycle (rows i)))))

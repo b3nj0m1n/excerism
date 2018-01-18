@@ -29,12 +29,12 @@ version :: Version
 version = Version [1,0,1,2] []
 bindir, libdir, dynlibdir, datadir, libexecdir, sysconfdir :: FilePath
 
-bindir     = "/Users/benlimited/exercism/haskell/rail-fence-cipher/.stack-work/install/x86_64-osx/lts-10.2/8.2.2/bin"
-libdir     = "/Users/benlimited/exercism/haskell/rail-fence-cipher/.stack-work/install/x86_64-osx/lts-10.2/8.2.2/lib/x86_64-osx-ghc-8.2.2/rail-fence-cipher-1.0.1.2-AiYvrCiyo9OJkhbxWQliPK-test"
-dynlibdir  = "/Users/benlimited/exercism/haskell/rail-fence-cipher/.stack-work/install/x86_64-osx/lts-10.2/8.2.2/lib/x86_64-osx-ghc-8.2.2"
-datadir    = "/Users/benlimited/exercism/haskell/rail-fence-cipher/.stack-work/install/x86_64-osx/lts-10.2/8.2.2/share/x86_64-osx-ghc-8.2.2/rail-fence-cipher-1.0.1.2"
-libexecdir = "/Users/benlimited/exercism/haskell/rail-fence-cipher/.stack-work/install/x86_64-osx/lts-10.2/8.2.2/libexec/x86_64-osx-ghc-8.2.2/rail-fence-cipher-1.0.1.2"
-sysconfdir = "/Users/benlimited/exercism/haskell/rail-fence-cipher/.stack-work/install/x86_64-osx/lts-10.2/8.2.2/etc"
+bindir     = "/Users/benjamin.hall/exercism/haskell/rail-fence-cipher/.stack-work/install/x86_64-osx/lts-10.2/8.2.2/bin"
+libdir     = "/Users/benjamin.hall/exercism/haskell/rail-fence-cipher/.stack-work/install/x86_64-osx/lts-10.2/8.2.2/lib/x86_64-osx-ghc-8.2.2/rail-fence-cipher-1.0.1.2-AiYvrCiyo9OJkhbxWQliPK-test"
+dynlibdir  = "/Users/benjamin.hall/exercism/haskell/rail-fence-cipher/.stack-work/install/x86_64-osx/lts-10.2/8.2.2/lib/x86_64-osx-ghc-8.2.2"
+datadir    = "/Users/benjamin.hall/exercism/haskell/rail-fence-cipher/.stack-work/install/x86_64-osx/lts-10.2/8.2.2/share/x86_64-osx-ghc-8.2.2/rail-fence-cipher-1.0.1.2"
+libexecdir = "/Users/benjamin.hall/exercism/haskell/rail-fence-cipher/.stack-work/install/x86_64-osx/lts-10.2/8.2.2/libexec/x86_64-osx-ghc-8.2.2/rail-fence-cipher-1.0.1.2"
+sysconfdir = "/Users/benjamin.hall/exercism/haskell/rail-fence-cipher/.stack-work/install/x86_64-osx/lts-10.2/8.2.2/etc"
 
 getBinDir, getLibDir, getDynLibDir, getDataDir, getLibexecDir, getSysconfDir :: IO FilePath
 getBinDir = catchIO (getEnv "rail_fence_cipher_bindir") (\_ -> return bindir)

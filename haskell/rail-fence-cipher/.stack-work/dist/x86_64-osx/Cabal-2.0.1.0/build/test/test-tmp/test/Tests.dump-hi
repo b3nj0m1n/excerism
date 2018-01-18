@@ -1,9 +1,9 @@
 
 ==================== FINAL INTERFACE ====================
-2018-01-18 11:15:57.224582 UTC
+2018-01-18 22:11:19.131128 UTC
 
 interface main:Main 8022
-  interface hash: c81d5ecdc64e9bf0bd67a79024d0f56f
+  interface hash: 44435f822eb22048436f55131bb6169e
   ABI hash: 7930a882b6e76503f780e84c21c2f242
   export-list hash: 033acc4b2b90388f442a616207a5b29c
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
@@ -65,7 +65,7 @@ import  -/  hspec-core-2.4.4:Test.Hspec.Core.Runner dcbaaf75cc4a7da1f1e0ae378837
 import  -/  hspec-core-2.4.4:Test.Hspec.Core.Spec 4371b0f2302c6aee07c9624d075941a2
 import  -/  hspec-core-2.4.4:Test.Hspec.Core.Spec.Monad ab7f07f5b1a38960f1f314c9b4df6b9c
 import  -/  hspec-expectations-0.8.2:Test.Hspec.Expectations 8bc0d926d5b42398a254e04604809fe4
-import  -/  rail-fence-cipher-1.0.1.2:RailFenceCipher 1454815589bc93cb4b59f5d1fc180943
+import  -/  rail-fence-cipher-1.0.1.2:RailFenceCipher 74a7b6841abcba93e1ad69de4613f06d
 a18e4bb2f0674ee24612719199a84dab
   $tc'Case :: GHC.Types.TyCon
   {- HasNoCafRefs, Strictness: m,
