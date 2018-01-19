@@ -11,7 +11,7 @@ toTupleWithSort :: String -> [Int] -> [(Char, Int)]
 toTupleWithSort s i = sortBy (comparing  snd) (zip s (cycle i))
 
 rows :: Int -> [Int]
-rows t = [1..t] ++ (reverse [2..t-1])
+rows t = [1..t] ++ reverse [2..t-1]
 
 decode :: Int -> String -> String
 decode size encoded = map fst (sortBy (comparing snd) (zip encoded (positions size encoded)))
