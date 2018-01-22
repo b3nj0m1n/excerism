@@ -21,7 +21,7 @@ private extension XCTest {
 
 class AccumulateTests: XCTestCase {
     func testEmptyAccumulation() {
-        let input = [Int]()
+        var input = [Int]()
         func square(_ input: Int) -> Int {
             return input * input
         }
