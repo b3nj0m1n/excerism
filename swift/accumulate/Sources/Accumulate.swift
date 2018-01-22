@@ -1,17 +1,19 @@
-extension Array where Element: Any {
-    func accumulate<Element>(_ fun : (Element) -> Element) -> [Element] {
-        var a = [Element]()
+import Foundation
+
+extension Array {
+    func accumulate<T>(_ fun : (T) -> T) -> [T] {
+        var a = Array<T>()
         for i in self {
-            a.append(fun(i))
+            a.append(fun(i as! T))
         }
         return a
     }
     
-    func accumulate<Element>(_ fun : (Element) -> [Element]) -> [[Element]] {
-        //        var a = [Element]()
-        //        for i in [0..<self.count] {
-        //            a.append(fun(self[i]))
-        //        }
-        return [[Element]]()
+    func accumulate<T>(_ fun : (T) -> [T]) -> [[T]] {
+        var a = Array<Array<T>>()
+        for i in self {
+            a.append(fun(i as! T))
+        }
+        return a
     }
 }
