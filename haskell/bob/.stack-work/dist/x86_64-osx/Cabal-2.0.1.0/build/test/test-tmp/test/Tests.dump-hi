@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2018-01-22 21:05:09.709042 UTC
+2018-01-23 06:08:51.792711 UTC
 
 interface main:Main 8022
-  interface hash: c12c0398ef35fb0fede159027cd38851
-  ABI hash: 9e0c084c8476a7c6e26ff760c6138641
+  interface hash: fef9c71f9e7845873e4631962de85259
+  ABI hash: 68283d9d03d6b21450055a6949c7828f
   export-list hash: 63a62995625e1086d78b9160ac1e6231
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: ceba4ce9de875b2bad78653ef2c6ae33
@@ -57,7 +57,7 @@ family instance modules: base-4.10.1.0:Control.Applicative
 import  -/  base-4.10.1.0:Data.Foldable 9ed87455d68e87ff2b5b8725eae9897e
 import  -/  base-4.10.1.0:GHC.Base 782fd99b5e36f3698a26179a49afca64
 import  -/  base-4.10.1.0:Prelude 31945b7d0084063347fc52506d3a4020
-import  -/  bob-1.2.0.5:Bob 7ba3ad7b874cd07de36a523c8604c245
+import  -/  bob-1.2.0.5:Bob df45dce42d5d68541a056461d3802d3e
 import  -/  ghc-prim-0.5.1.1:GHC.Types b1fd0716441595db508c1a74387bf394
 import  -/  hspec-2.4.4:Test.Hspec 917f73e7880f4d00e7f96bf294ccc197
 import  -/  hspec-2.4.4:Test.Hspec.Runner 76ee7a45c2f90c0efa69a5b4a82c0d59
@@ -147,12 +147,12 @@ cc5d9e63f5ac6e50097b46a257200a49
      Unfolding: InlineRule (1, True, False)
                 (\ (ds :: Main.Case) ->
                  case ds of wild { Main.Case ds1 ds2 ds3 -> ds2 }) -}
-697e3e52b3ec01c9fbd41f6287220371
+f4c505c2a0dc529ab6f789a1b0343272
   main :: GHC.Types.IO ()
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: InlineRule (0, True, True)
                 Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
-9857ff3dfec9c02bb2da1a58f223cdff
+270b1f987b8aad027d6a6bb42cbb2208
   main1 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
@@ -171,12 +171,12 @@ cc5d9e63f5ac6e50097b46a257200a49
                                             <GHC.Types.IO>_R
                                             <()>_N))
                                   (Sym (Test.Hspec.Core.Spec.Monad.N:SpecM[0] <()>_N) <()>_N)))
-                        s of ds1 { (#,#) ipv17 ipv18 ->
-                 case ipv18 of wild { Test.Hspec.Core.Runner.Summary ds ds2 ->
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case ipv1 of wild { Test.Hspec.Core.Runner.Summary ds ds2 ->
                  case ds2 of wild1 { GHC.Types.I# x ->
                  case x of wild2 {
-                   DEFAULT -> System.Exit.exitFailure1 @ () ipv17
-                   0# -> (# ipv17, GHC.Tuple.() #) } } } }) -}
+                   DEFAULT -> System.Exit.exitFailure1 @ () ipv
+                   0# -> (# ipv, GHC.Tuple.() #) } } } }) -}
 204f184aadd864a02769ab658e8faecf
   main2 ::
     GHC.Prim.State# GHC.Prim.RealWorld
@@ -209,7 +209,7 @@ b6f35c395667ad97329bf49fc574f101
                    GHC.Types.False
                    Test.Hspec.Core.Options.defaultConfig1
                    (GHC.Base.Nothing @ GHC.Types.Int)) -}
-54614c4e7917ee9b514d1a698106ef85
+b6db337a230872f4a742f2c5eb7b51e9
   main4 ::
     GHC.Prim.State# GHC.Prim.RealWorld
     -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
