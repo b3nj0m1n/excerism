@@ -1,10 +1,10 @@
 
 ==================== FINAL INTERFACE ====================
-2018-01-23 06:08:50.933642 UTC
+2018-01-23 22:02:14.488837 UTC
 
 interface bob-1.2.0.5-41cfZtqo8NrIe4DcDwBya:Bob 8022
-  interface hash: 85e761f74e9a0403a0603c77274866c6
-  ABI hash: df45dce42d5d68541a056461d3802d3e
+  interface hash: 6cbefbeef254524c904ae2ad5252256d
+  ABI hash: 8a15b6c2b2244487a9734293917f58b7
   export-list hash: 89b87cbbcf8aba598c8c607dbb48b880
   orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
   flag hash: 0451a77cc0d8e5d99d548d6441c7dd35
@@ -50,7 +50,7 @@ import  -/  ghc-prim-0.5.1.1:GHC.Classes 93e2660065dce9329577e83d76d8f0d4
 a6533431c1e9421c3e292cca26d89bcb
   $wgo :: [GHC.Types.Char] -> GHC.Prim.Int# -> GHC.Prim.Int#
   {- Arity: 2, Strictness: <S,1*U><S,U>, Inline: [0] -}
-a4e0bd3fb5dc70ccec8a2c4ef4b9428f
+29c0f18e52643d248684bfc9b66550ff
   responseFor :: GHC.Base.String -> GHC.Base.String
   {- Arity: 1, Strictness: <S,U>,
      Unfolding: (\ (xs :: GHC.Base.String) ->
@@ -74,7 +74,10 @@ a4e0bd3fb5dc70ccec8a2c4ef4b9428f
                                 []
                                 -> case eta of wild2 { GHC.Types.C# x ->
                                    case x of wild3 { DEFAULT -> $j1 '?'# -> Bob.responseFor4 } }
-                                : y ys -> go1 ys y }
+                                : y ys
+                                -> case y of wild2 { GHC.Types.C# x ->
+                                   case x of wild3 {
+                                     DEFAULT -> go1 ys wild2 ' '# -> go1 ys eta } } }
                           } in
                           go1 xs (GHC.List.lastError @ GHC.Types.Char) }
                  } in

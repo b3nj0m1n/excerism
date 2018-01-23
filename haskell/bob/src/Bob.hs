@@ -19,8 +19,7 @@ shoutQuestion :: String -> Bool
 shoutQuestion x = shout x && question x
 
 question :: String -> Bool
-question x = last x == '?'
+question xs = last ( [x | x <- xs, x /= ' ']) == '?'
 
 onlyCharacters :: String -> String
 onlyCharacters xs = [x | x <- xs, elem x  (['A'..'Z'] ++ ['a'..'z'])]
-
