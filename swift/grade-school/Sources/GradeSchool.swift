@@ -1,12 +1,8 @@
 class GradeSchool {
-    init() {
-        roster = Dictionary<Int, [String]> ()
-    }
-    
-    var roster: Dictionary<Int, [String]>
+    var roster: [Int: [String]] = [:]
     
     func studentsInGrade(_ grade: Int) -> [String] {
-        return roster[grade] ?? [String]()
+        return roster[grade] ?? []
     }
     
     func addStudent(_ name: String, grade: Int) {
@@ -15,8 +11,8 @@ class GradeSchool {
         roster[grade] = names
     }
     
-    var sortedRoster: Dictionary<Int, [String]> {
-        var sortedRoster = Dictionary<Int, [String]> ()
+    var sortedRoster: [Int: [String]] {
+        var sortedRoster: [Int: [String]] = [:]
         roster.forEach { (key, value) in
             sortedRoster[key] = value.sorted(by: <)
         }
