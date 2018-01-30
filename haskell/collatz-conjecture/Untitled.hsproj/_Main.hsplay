@@ -1,0 +1,17 @@
+-- Haskell Playground 1.0
+let v = Nothing
+
+let xs = "test"
+
+import Data.Char
+
+import Data.Maybe
+
+let t = [ 1 | g <- xs, g `elem` "t"]
+
+let h = ['a','b']
+
+let i = [Nothing, Just 2, Just 4, Nothing]
+
+
+catMaybes i
