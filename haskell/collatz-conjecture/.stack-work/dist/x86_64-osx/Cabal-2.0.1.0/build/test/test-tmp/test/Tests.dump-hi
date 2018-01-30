@@ -1,0 +1,1434 @@
+
+==================== FINAL INTERFACE ====================
+2018-01-29 23:39:57.072117 UTC
+
+interface main:Main 8022
+  interface hash: f95fe53c130eec6b46d68b83e055edd3
+  ABI hash: 3d8cde7cfa748283337f4ef36fde0794
+  export-list hash: 724a2462453c75b473f5a5b34bc11b59
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: ceba4ce9de875b2bad78653ef2c6ae33
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Main.main
+module dependencies:
+package dependencies: HUnit-1.6.0.0 QuickCheck-2.10.1
+                      ansi-terminal-0.7.1.1 array-0.5.2.0 async-2.1.1.1 base-4.10.1.0
+                      call-stack-0.1.0 collatz-conjecture-1.2.0.2 colour-2.3.4
+                      containers-0.5.10.2 deepseq-1.4.3.0 directory-1.3.0.2
+                      filepath-1.4.1.2 ghc-boot-th-8.2.2 ghc-prim-0.5.1.1 hspec-2.4.4
+                      hspec-core-2.4.4 hspec-expectations-0.8.2 integer-gmp-1.0.1.0
+                      pretty-1.1.3.3 primitive-0.6.2.0 quickcheck-io-0.2.0 random-1.1
+                      setenv-0.1.1.3 stm-2.4.4.1 template-haskell-2.12.0.0 tf-random-0.5
+                      time-1.8.0.2 transformers-0.5.2.0 unix-2.7.2.2
+orphans: colour-2.3.4:Data.Colour
+         quickcheck-io-0.2.0:Test.QuickCheck.IO
+         transformers-0.5.2.0:Control.Monad.Trans.Error
+         time-1.8.0.2:Data.Time.Format.Parse
+         time-1.8.0.2:Data.Time.LocalTime.Internal.ZonedTime
+         time-1.8.0.2:Data.Time.LocalTime.Internal.LocalTime
+         time-1.8.0.2:Data.Time.Calendar.Gregorian
+         stm-2.4.4.1:Control.Monad.STM base-4.10.1.0:GHC.Float
+         base-4.10.1.0:GHC.Base
+family instance modules: base-4.10.1.0:Control.Applicative
+                         base-4.10.1.0:Data.Complex base-4.10.1.0:Data.Either
+                         base-4.10.1.0:Data.Functor.Compose base-4.10.1.0:Data.Functor.Const
+                         base-4.10.1.0:Data.Functor.Identity
+                         base-4.10.1.0:Data.Functor.Product base-4.10.1.0:Data.Functor.Sum
+                         base-4.10.1.0:Data.List.NonEmpty base-4.10.1.0:Data.Monoid
+                         base-4.10.1.0:Data.Semigroup base-4.10.1.0:Data.Type.Equality
+                         base-4.10.1.0:Data.Version base-4.10.1.0:Data.Void
+                         base-4.10.1.0:GHC.Exts base-4.10.1.0:GHC.Generics
+                         base-4.10.1.0:GHC.IO.Exception base-4.10.1.0:GHC.TypeLits
+                         base-4.10.1.0:GHC.TypeNats containers-0.5.10.2:Data.IntMap.Internal
+                         containers-0.5.10.2:Data.IntSet.Internal
+                         containers-0.5.10.2:Data.Map.Internal
+                         containers-0.5.10.2:Data.Sequence.Internal
+                         containers-0.5.10.2:Data.Set.Internal
+                         ghc-boot-th-8.2.2:GHC.ForeignSrcLang.Type
+                         ghc-boot-th-8.2.2:GHC.LanguageExtensions.Type
+                         hspec-core-2.4.4:Test.Hspec.Core.Example
+                         pretty-1.1.3.3:Text.PrettyPrint.Annotated.HughesPJ
+                         pretty-1.1.3.3:Text.PrettyPrint.HughesPJ
+                         primitive-0.6.2.0:Control.Monad.Primitive
+                         template-haskell-2.12.0.0:Language.Haskell.TH.Syntax
+import  -/  base-4.10.1.0:Data.Foldable 9ed87455d68e87ff2b5b8725eae9897e
+import  -/  base-4.10.1.0:GHC.Base 782fd99b5e36f3698a26179a49afca64
+import  -/  base-4.10.1.0:Prelude 31945b7d0084063347fc52506d3a4020
+import  -/  collatz-conjecture-1.2.0.2:CollatzConjecture 74b8f36a5571810273ea6bb217d601ff
+import  -/  ghc-prim-0.5.1.1:GHC.Types b1fd0716441595db508c1a74387bf394
+import  -/  hspec-2.4.4:Test.Hspec 917f73e7880f4d00e7f96bf294ccc197
+import  -/  hspec-2.4.4:Test.Hspec.Runner 76ee7a45c2f90c0efa69a5b4a82c0d59
+import  -/  hspec-core-2.4.4:Test.Hspec.Core.Options bb781f7ab113f22dac5250ef654e6b99
+import  -/  hspec-core-2.4.4:Test.Hspec.Core.Runner dcbaaf75cc4a7da1f1e0ae3788372a84
+import  -/  hspec-core-2.4.4:Test.Hspec.Core.Spec 4371b0f2302c6aee07c9624d075941a2
+import  -/  hspec-core-2.4.4:Test.Hspec.Core.Spec.Monad ab7f07f5b1a38960f1f314c9b4df6b9c
+import  -/  hspec-expectations-0.8.2:Test.Hspec.Expectations 8bc0d926d5b42398a254e04604809fe4
+import  -/  integer-gmp-1.0.1.0:GHC.Integer.Type 5fa81108482c33b62ec3ac7464eece96
+a18e4bb2f0674ee24612719199a84dab
+  $tc'Case :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   8197111133229858407##
+                   13847006553897280588##
+                   Main.$trModule
+                   Main.$tc'Case2
+                   0#
+                   Main.$tc'Case1) -}
+8f010006a57838aae2252530b9cbf5fc
+  $tc'Case1 :: GHC.Types.KindRep
+  {- HasNoCafRefs, Strictness: m4, Inline: [~] -}
+b4f883606fd905089344438718b2c630
+  $tc'Case2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tc'Case3) -}
+b70b9a2f50a01b383c0fc203a93b45f6
+  $tc'Case3 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("'Case"#) -}
+fb54e6971b8cdb3d6eb813b73e5967b8
+  $tcCase :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   990021888930651814##
+                   4262142848388084561##
+                   Main.$trModule
+                   Main.$tcCase1
+                   0#
+                   GHC.Types.krep$*) -}
+d6f1567c5e9fb74d00e1be64470ce3d3
+  $tcCase1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$tcCase2) -}
+7179be3aa9b5f07778c569f16b1ed2bf
+  $tcCase2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Case"#) -}
+9d72b2fddb818bcd8919052935e0f1f3
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Main.$trModule3 Main.$trModule1) -}
+3108ceeaf5a318be844de422b45de9d8
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$trModule2) -}
+e5875966b74dad2d29772660b8a75e33
+  $trModule2 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("Main"#) -}
+33bd129667974f0a0ba4a893af79107d
+  $trModule3 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS Main.$trModule4) -}
+d026be77cb9ced20e35a61514e0458aa
+  $trModule4 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("main"#) -}
+eca8dff9d630b5fb2a00f6da2c10d1ed
+  data Case
+    = Case {description :: GHC.Base.String,
+            number :: GHC.Integer.Type.Integer,
+            expected :: GHC.Base.Maybe GHC.Integer.Type.Integer}
+eca8dff9d630b5fb2a00f6da2c10d1ed
+  description :: Main.Case -> GHC.Base.String
+  RecSel Left Main.Case
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(SLL),1*U(1*U,A,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Main.Case) ->
+                 case ds of wild { Main.Case ds1 ds2 ds3 -> ds1 }) -}
+eca8dff9d630b5fb2a00f6da2c10d1ed
+  expected :: Main.Case -> GHC.Base.Maybe GHC.Integer.Type.Integer
+  RecSel Left Main.Case
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LLS),1*U(A,A,1*U)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Main.Case) ->
+                 case ds of wild { Main.Case ds1 ds2 ds3 -> ds3 }) -}
+ecca1a7cf5bddff289da3d3ca9c888bb
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: InlineRule (0, True, True)
+                Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R)) -}
+9b9e776611e46a6afb25eef8b179a92d
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (s :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case Test.Hspec.Core.Runner.hspec2
+                        Main.main100
+                        Main.main2
+                          `cast`
+                        (Trans
+                             (Sym (GHC.Types.N:IO[0]
+                                       <((), [Test.Hspec.Core.Tree.SpecTree ()])>_R))
+                             (Trans
+                                  (Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                            <[Test.Hspec.Core.Tree.SpecTree ()]>_N
+                                            <GHC.Types.IO>_R
+                                            <()>_N))
+                                  (Sym (Test.Hspec.Core.Spec.Monad.N:SpecM[0] <()>_N) <()>_N)))
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case ipv1 of wild { Test.Hspec.Core.Runner.Summary ds ds2 ->
+                 case ds2 of wild1 { GHC.Types.I# x ->
+                 case x of wild2 {
+                   DEFAULT -> System.Exit.exitFailure1 @ () ipv
+                   0# -> (# ipv, GHC.Tuple.() #) } } } }) -}
+052cc896701020e7ab63c0000c8bd360
+  main10 ::
+    [Test.Hspec.Core.Tree.Tree
+       (Test.Hspec.Core.Example.ActionWith ())
+       (Test.Hspec.Core.Tree.Item ())]
+  {- Unfolding: (GHC.Base.++
+                   @ (Test.Hspec.Core.Tree.Tree
+                        (Test.Hspec.Core.Example.ActionWith ())
+                        (Test.Hspec.Core.Tree.Item ()))
+                   Main.main36
+                     `cast`
+                   (Nth:1
+                        (Nth:3
+                             (Nth:3
+                                  (Trans
+                                       (Sym (GHC.Types.N:IO[0]
+                                                 <((),
+                                                   [Test.Hspec.Core.Tree.SpecTree
+                                                      (Test.Hspec.Core.Example.Arg
+                                                         Test.Hspec.Expectations.Expectation)])>_R))
+                                       (Trans
+                                            (Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                      <[Test.Hspec.Core.Tree.SpecTree
+                                                          (Test.Hspec.Core.Example.Arg
+                                                             Test.Hspec.Expectations.Expectation)]>_N
+                                                      <GHC.Types.IO>_R
+                                                      <()>_N))
+                                            (Trans
+                                                 (Sym (Test.Hspec.Core.Spec.Monad.N:SpecM[0]
+                                                           (Sym (Test.Hspec.Core.Example.D:R:ArgIO[0]))) <()>_N)
+                                                 (Trans
+                                                      (Nth:2
+                                                           (Trans
+                                                                (Test.Hspec.Core.Spec.Monad.N:SpecM[0]
+                                                                     <()>_N <()>_N
+                                                                 ->_R Test.Hspec.Core.Spec.Monad.N:SpecM[0]
+                                                                          <()>_N <()>_N
+                                                                 ->_R Test.Hspec.Core.Spec.Monad.N:SpecM[0]
+                                                                          <()>_N <()>_N)
+                                                                (<Control.Monad.Trans.Writer.Lazy.WriterT
+                                                                    [Test.Hspec.Core.Tree.SpecTree
+                                                                       ()]
+                                                                    GHC.Types.IO
+                                                                    ()>_R
+                                                                 ->_R <Control.Monad.Trans.Writer.Lazy.WriterT
+                                                                         [Test.Hspec.Core.Tree.SpecTree
+                                                                            ()]
+                                                                         GHC.Types.IO
+                                                                         ()>_R
+                                                                 ->_R Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                                          <[Test.Hspec.Core.Tree.SpecTree
+                                                                              ()]>_N
+                                                                          <GHC.Types.IO>_R
+                                                                          <()>_N)))
+                                                      (Trans
+                                                           (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                                <[Test.Hspec.Core.Tree.SpecTree
+                                                                    ()]>_N
+                                                                <GHC.Types.IO>_R
+                                                                <()>_N)
+                                                           (GHC.Types.N:IO[0]
+                                                                <((),
+                                                                  [Test.Hspec.Core.Tree.SpecTree
+                                                                     ()])>_R)))))))))
+                   Main.main11
+                     `cast`
+                   (Nth:1
+                        (Nth:3
+                             (Nth:3
+                                  (Trans
+                                       (Sym (GHC.Types.N:IO[0]
+                                                 <((),
+                                                   [Test.Hspec.Core.Tree.SpecTree
+                                                      (Test.Hspec.Core.Example.Arg
+                                                         Test.Hspec.Expectations.Expectation)])>_R))
+                                       (Trans
+                                            (Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                      <[Test.Hspec.Core.Tree.SpecTree
+                                                          (Test.Hspec.Core.Example.Arg
+                                                             Test.Hspec.Expectations.Expectation)]>_N
+                                                      <GHC.Types.IO>_R
+                                                      <()>_N))
+                                            (Trans
+                                                 (Sym (Test.Hspec.Core.Spec.Monad.N:SpecM[0]
+                                                           (Sym (Test.Hspec.Core.Example.D:R:ArgIO[0]))) <()>_N)
+                                                 (Trans
+                                                      (Nth:2
+                                                           (Trans
+                                                                (Test.Hspec.Core.Spec.Monad.N:SpecM[0]
+                                                                     <()>_N <()>_N
+                                                                 ->_R Test.Hspec.Core.Spec.Monad.N:SpecM[0]
+                                                                          <()>_N <()>_N
+                                                                 ->_R Test.Hspec.Core.Spec.Monad.N:SpecM[0]
+                                                                          <()>_N <()>_N)
+                                                                (<Control.Monad.Trans.Writer.Lazy.WriterT
+                                                                    [Test.Hspec.Core.Tree.SpecTree
+                                                                       ()]
+                                                                    GHC.Types.IO
+                                                                    ()>_R
+                                                                 ->_R <Control.Monad.Trans.Writer.Lazy.WriterT
+                                                                         [Test.Hspec.Core.Tree.SpecTree
+                                                                            ()]
+                                                                         GHC.Types.IO
+                                                                         ()>_R
+                                                                 ->_R Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                                          <[Test.Hspec.Core.Tree.SpecTree
+                                                                              ()]>_N
+                                                                          <GHC.Types.IO>_R
+                                                                          <()>_N)))
+                                                      (Trans
+                                                           (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                                <[Test.Hspec.Core.Tree.SpecTree
+                                                                    ()]>_N
+                                                                <GHC.Types.IO>_R
+                                                                <()>_N)
+                                                           (GHC.Types.N:IO[0]
+                                                                <((),
+                                                                  [Test.Hspec.Core.Tree.SpecTree
+                                                                     ()])>_R)))))))))) -}
+7edc95ad43b1a1816704b3e6eb7b3d9b
+  main100 :: Test.Hspec.Core.Options.Config
+  {- Unfolding: (Test.Hspec.Core.Options.Config
+                   GHC.Types.False
+                   GHC.Types.False
+                   GHC.Types.False
+                   GHC.Types.True
+                   (GHC.Base.Nothing @ GHC.IO.FilePath)
+                   GHC.Types.False
+                   GHC.Types.False
+                   (GHC.Base.Nothing @ (Test.Hspec.Core.Util.Path -> GHC.Types.Bool))
+                   (GHC.Base.Nothing @ (Test.Hspec.Core.Util.Path -> GHC.Types.Bool))
+                   (GHC.Base.Nothing @ GHC.Integer.Type.Integer)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   (GHC.Base.Nothing @ GHC.Types.Int)
+                   Test.Hspec.Core.Example.defaultParams1
+                   Test.Hspec.Core.Options.ColorAuto
+                   GHC.Types.True
+                   (GHC.Base.Nothing @ Test.Hspec.Core.Formatters.Monad.Formatter)
+                   GHC.Types.False
+                   Test.Hspec.Core.Options.defaultConfig1
+                   (GHC.Base.Nothing @ GHC.Types.Int)) -}
+4148ac94c8b71f3680be1372aeacb649
+  main101 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1,
+     Unfolding: (GHC.TopHandler.runMainIO1
+                   @ ()
+                   Main.main1 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+80d1d95808a7110a8f7bc181268084ac
+  main11 ::
+    [Test.Hspec.Core.Tree.SpecTree
+       (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Test.Hspec.Core.Tree.SpecTree
+                        (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+                   Main.main12
+                   (GHC.Types.[]
+                      @ (Test.Hspec.Core.Tree.SpecTree
+                           (Test.Hspec.Core.Example.Arg
+                              Test.Hspec.Expectations.Expectation)))) -}
+1d9054b85e47ea85985bec762cfe84c9
+  main12 ::
+    Test.Hspec.Core.Tree.Tree
+      (Test.Hspec.Core.Example.ActionWith
+         (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+      (Test.Hspec.Core.Tree.Item
+         (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+  {- Strictness: m3,
+     Unfolding: (Test.Hspec.Core.Tree.Leaf
+                   @ (Test.Hspec.Core.Example.ActionWith
+                        (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+                   @ (Test.Hspec.Core.Tree.Item
+                        (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+                   Main.main13) -}
+938e3a28bbb69b4744541382a0161068
+  main13 ::
+    Test.Hspec.Core.Tree.Item
+      (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)
+  {- Strictness: m,
+     Unfolding: (Test.Hspec.Core.Tree.Item
+                   @ (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)
+                   Main.main32
+                   Main.main18
+                   GHC.Types.False
+                   Main.main14
+                     `cast`
+                   (<Test.Hspec.Core.Example.Params>_R
+                    ->_R <Test.Hspec.Core.Example.ActionWith
+                            (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)
+                          -> GHC.Types.IO ()>_R
+                    ->_R <Test.Hspec.Core.Example.ProgressCallback>_R
+                    ->_R Sym (GHC.Types.N:IO[0]
+                                  <Data.Either.Either
+                                     GHC.Exception.SomeException
+                                     Test.Hspec.Core.Example.Result>_R))) -}
+130b44291ce8d72a57dd6da2b43efc85
+  main14 ::
+    Test.Hspec.Core.Example.Params
+    -> (Test.Hspec.Core.Example.ActionWith
+          (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)
+        -> GHC.Types.IO ())
+    -> Test.Hspec.Core.Example.ProgressCallback
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Either.Either
+            GHC.Exception.SomeException Test.Hspec.Core.Example.Result #)
+  {- Arity: 4,
+     Unfolding: (Test.Hspec.Core.Example.safeEvaluateExample1
+                   @ Test.Hspec.Expectations.Expectation
+                   Test.Hspec.Core.Example.$fExampleIO1
+                     `cast`
+                   (Trans
+                        (<Test.Hspec.Expectations.Expectation>_R
+                         ->_R <Test.Hspec.Core.Example.Params>_R
+                         ->_R <(Test.Hspec.Core.Example.Arg
+                                  Test.Hspec.Expectations.Expectation
+                                -> GHC.Types.IO ())
+                               -> GHC.Types.IO ()>_R
+                         ->_R <Test.Hspec.Core.Example.ProgressCallback>_R
+                         ->_R Sym (GHC.Types.N:IO[0] <Test.Hspec.Core.Example.Result>_R))
+                        (Sym (Test.Hspec.Core.Example.N:Example[0]
+                                  <Test.Hspec.Expectations.Expectation>_N)))
+                   Main.main15 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+cfa0d8645f02df259610af50cda49395
+  main15 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (eta2 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case CollatzConjecture.collatz Main.main17 of wild {
+                   GHC.Base.Nothing -> (# eta2, GHC.Tuple.() #)
+                   GHC.Base.Just a1
+                   -> Main.main16
+                        wild
+                        eta2
+                        (GHC.Base.Nothing @ GHC.Integer.Type.Integer) }) -}
+9304f65e7e136bf309a1719c724c7021
+  main16 ::
+    GHC.Base.Maybe GHC.Integer.Type.Integer
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> GHC.Base.Maybe GHC.Integer.Type.Integer
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 3, Strictness: <B,1*U><B,U><B,1*U>x -}
+45f132fc0ce70c961c70d273b9e1d824
+  main17 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (-15) -}
+2d94f3bd164190f309e41c8648d8c9ff
+  main18 :: GHC.Base.Maybe Test.Hspec.Core.Example.Location
+  {- Unfolding: (Test.Hspec.Core.Tree.specItem13 Main.main19) -}
+89415baccd52dd39694fef5a02cc1ea2
+  main19 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Test.Hspec.Core.Tree.specItem11
+                   Test.Hspec.Core.Tree.specItem3
+                   Main.main20) -}
+cd1c2882903a1d935b187e3ce999cef0
+  main2 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          ((),
+           [Test.Hspec.Core.Tree.Tree
+              (Test.Hspec.Core.Example.ActionWith ())
+              (Test.Hspec.Core.Tree.Item ())]) #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (eta :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 (# eta, Main.main3 #)) -}
+5fc9fe893bea7e5f58279926e234642c
+  main20 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Test.Hspec.Core.Spec.it9
+                   Test.Hspec.Core.Spec.it1
+                   Main.main21) -}
+2050ef660239ca36de650fda64144ac5
+  main21 :: GHC.Stack.Types.CallStack
+  {- Strictness: m2,
+     Unfolding: (GHC.Stack.Types.PushCallStack
+                   Main.main30
+                   Main.main22
+                   GHC.Stack.Types.EmptyCallStack) -}
+b4faaa44c8e9d2125a16ebd893485e5e
+  main22 :: GHC.Stack.Types.SrcLoc
+  {- Strictness: m,
+     Unfolding: (GHC.Stack.Types.SrcLoc
+                   Main.main29
+                   Main.main28
+                   Main.main26
+                   Main.main25
+                   Main.main24
+                   Main.main25
+                   Main.main23) -}
+667dd31fd9b751aef3466c90e726efbd
+  main23 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 45#) -}
+74715635947c19cd3f6bc42958674a87
+  main24 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 21#) -}
+55aadd4e16c4a5f83e811ff099063bff
+  main25 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 17#) -}
+24ba6103bedce687a3fce6bf041fa5ff
+  main26 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main27) -}
+e5a0db6e911ae509736537a4d08b97fd
+  main27 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("test/Tests.hs"#) -}
+2206ab8ca7e385231e7f635019eaff58
+  main28 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.$trModule2) -}
+8dcb0e27627636859d0e8f607ee72232
+  main29 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.$trModule4) -}
+23f2e05079fa1dd5fc5f3fb03092c7f3
+  main3 ::
+    ((),
+     [Test.Hspec.Core.Tree.Tree
+        (Test.Hspec.Core.Example.ActionWith ())
+        (Test.Hspec.Core.Tree.Item ())])
+  {- Strictness: m, Unfolding: ((GHC.Tuple.(), Main.main4)) -}
+0dad8759e0c288c11296f4a3f9ca6fcd
+  main30 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main31) -}
+75ca7605aa0472b1fc20d26f3537ac03
+  main31 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("it"#) -}
+ed7ec554df016fc82b45df041564775a
+  main32 :: [GHC.Types.Char]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   Main.main35
+                   Main.main33) -}
+c82c8119f3fc2b96d422423f814fe26d
+  main33 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main34) -}
+50fa8d068dc805b244997fba0254aef3
+  main34 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("egative value is an error"#) -}
+ffa7c822169a9d7fc2d25d201d347221
+  main35 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# 'n'#) -}
+9851d23560c9bb615dbc5985921352d1
+  main36 ::
+    [Test.Hspec.Core.Tree.SpecTree
+       (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Test.Hspec.Core.Tree.SpecTree
+                        (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+                   Main.main37
+                   (GHC.Types.[]
+                      @ (Test.Hspec.Core.Tree.SpecTree
+                           (Test.Hspec.Core.Example.Arg
+                              Test.Hspec.Expectations.Expectation)))) -}
+dbe86a1bff555f7e18f13eeba6bff393
+  main37 ::
+    Test.Hspec.Core.Tree.Tree
+      (Test.Hspec.Core.Example.ActionWith
+         (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+      (Test.Hspec.Core.Tree.Item
+         (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+  {- Strictness: m3,
+     Unfolding: (Test.Hspec.Core.Tree.Leaf
+                   @ (Test.Hspec.Core.Example.ActionWith
+                        (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+                   @ (Test.Hspec.Core.Tree.Item
+                        (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+                   Main.main38) -}
+e0cc20ae3598bffe0f383e494c38838b
+  main38 ::
+    Test.Hspec.Core.Tree.Item
+      (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)
+  {- Strictness: m,
+     Unfolding: (Test.Hspec.Core.Tree.Item
+                   @ (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)
+                   Main.main42
+                   Main.main18
+                   GHC.Types.False
+                   Main.main39
+                     `cast`
+                   (<Test.Hspec.Core.Example.Params>_R
+                    ->_R <Test.Hspec.Core.Example.ActionWith
+                            (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)
+                          -> GHC.Types.IO ()>_R
+                    ->_R <Test.Hspec.Core.Example.ProgressCallback>_R
+                    ->_R Sym (GHC.Types.N:IO[0]
+                                  <Data.Either.Either
+                                     GHC.Exception.SomeException
+                                     Test.Hspec.Core.Example.Result>_R))) -}
+802246fce3f4c67aee517be24876c877
+  main39 ::
+    Test.Hspec.Core.Example.Params
+    -> (Test.Hspec.Core.Example.ActionWith
+          (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)
+        -> GHC.Types.IO ())
+    -> Test.Hspec.Core.Example.ProgressCallback
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Either.Either
+            GHC.Exception.SomeException Test.Hspec.Core.Example.Result #)
+  {- Arity: 4,
+     Unfolding: (Test.Hspec.Core.Example.safeEvaluateExample1
+                   @ Test.Hspec.Expectations.Expectation
+                   Test.Hspec.Core.Example.$fExampleIO1
+                     `cast`
+                   (Trans
+                        (<Test.Hspec.Expectations.Expectation>_R
+                         ->_R <Test.Hspec.Core.Example.Params>_R
+                         ->_R <(Test.Hspec.Core.Example.Arg
+                                  Test.Hspec.Expectations.Expectation
+                                -> GHC.Types.IO ())
+                               -> GHC.Types.IO ()>_R
+                         ->_R <Test.Hspec.Core.Example.ProgressCallback>_R
+                         ->_R Sym (GHC.Types.N:IO[0] <Test.Hspec.Core.Example.Result>_R))
+                        (Sym (Test.Hspec.Core.Example.N:Example[0]
+                                  <Test.Hspec.Expectations.Expectation>_N)))
+                   Main.main40 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+5ed150f6f9c410fae99a1c862b6e7e8a
+  main4 ::
+    [Test.Hspec.Core.Tree.Tree
+       (Test.Hspec.Core.Example.ActionWith ())
+       (Test.Hspec.Core.Tree.Item ())]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Test.Hspec.Core.Tree.Tree
+                        (Test.Hspec.Core.Example.ActionWith ())
+                        (Test.Hspec.Core.Tree.Item ()))
+                   Main.main5
+                   (GHC.Types.[]
+                      @ (Test.Hspec.Core.Tree.Tree
+                           (Test.Hspec.Core.Example.ActionWith ())
+                           (Test.Hspec.Core.Tree.Item ())))) -}
+a0ab38ef3df45aca15a145d25e4e455a
+  main40 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (eta2 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case CollatzConjecture.collatz Main.main41 of wild {
+                   GHC.Base.Nothing -> (# eta2, GHC.Tuple.() #)
+                   GHC.Base.Just a1
+                   -> Main.main16
+                        wild
+                        eta2
+                        (GHC.Base.Nothing @ GHC.Integer.Type.Integer) }) -}
+77b454498cdb44140c43ec4937c7aad7
+  main41 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (0) -}
+c292d3a1148b485316eb8f3afdd7f905
+  main42 :: [GHC.Types.Char]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   Main.main45
+                   Main.main43) -}
+ea29b838f71db8e0663e58ca93ad2146
+  main43 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main44) -}
+af58df3fbdaaf8ffefb40a252e76a873
+  main44 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("ero is an error"#) -}
+9f8da2619d6ed0de25cb14fdecf3a83f
+  main45 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# 'z'#) -}
+a3c4ee33d08dca1c4ac8798582414893
+  main46 ::
+    [Test.Hspec.Core.Tree.SpecTree
+       (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Test.Hspec.Core.Tree.SpecTree
+                        (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+                   Main.main47
+                   (GHC.Types.[]
+                      @ (Test.Hspec.Core.Tree.SpecTree
+                           (Test.Hspec.Core.Example.Arg
+                              Test.Hspec.Expectations.Expectation)))) -}
+59e1bf3b93404b7dd57e0f293e5b1778
+  main47 ::
+    Test.Hspec.Core.Tree.Tree
+      (Test.Hspec.Core.Example.ActionWith
+         (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+      (Test.Hspec.Core.Tree.Item
+         (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+  {- Strictness: m3,
+     Unfolding: (Test.Hspec.Core.Tree.Leaf
+                   @ (Test.Hspec.Core.Example.ActionWith
+                        (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+                   @ (Test.Hspec.Core.Tree.Item
+                        (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+                   Main.main48) -}
+6ee777bab7f6874c60d46723053ac80d
+  main48 ::
+    Test.Hspec.Core.Tree.Item
+      (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)
+  {- Strictness: m,
+     Unfolding: (Test.Hspec.Core.Tree.Item
+                   @ (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)
+                   Main.main55
+                   Main.main18
+                   GHC.Types.False
+                   Main.main49
+                     `cast`
+                   (<Test.Hspec.Core.Example.Params>_R
+                    ->_R <Test.Hspec.Core.Example.ActionWith
+                            (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)
+                          -> GHC.Types.IO ()>_R
+                    ->_R <Test.Hspec.Core.Example.ProgressCallback>_R
+                    ->_R Sym (GHC.Types.N:IO[0]
+                                  <Data.Either.Either
+                                     GHC.Exception.SomeException
+                                     Test.Hspec.Core.Example.Result>_R))) -}
+9a2f468b246e94fdad015594025128eb
+  main49 ::
+    Test.Hspec.Core.Example.Params
+    -> (Test.Hspec.Core.Example.ActionWith
+          (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)
+        -> GHC.Types.IO ())
+    -> Test.Hspec.Core.Example.ProgressCallback
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Either.Either
+            GHC.Exception.SomeException Test.Hspec.Core.Example.Result #)
+  {- Arity: 4,
+     Unfolding: (Test.Hspec.Core.Example.safeEvaluateExample1
+                   @ Test.Hspec.Expectations.Expectation
+                   Test.Hspec.Core.Example.$fExampleIO1
+                     `cast`
+                   (Trans
+                        (<Test.Hspec.Expectations.Expectation>_R
+                         ->_R <Test.Hspec.Core.Example.Params>_R
+                         ->_R <(Test.Hspec.Core.Example.Arg
+                                  Test.Hspec.Expectations.Expectation
+                                -> GHC.Types.IO ())
+                               -> GHC.Types.IO ()>_R
+                         ->_R <Test.Hspec.Core.Example.ProgressCallback>_R
+                         ->_R Sym (GHC.Types.N:IO[0] <Test.Hspec.Core.Example.Result>_R))
+                        (Sym (Test.Hspec.Core.Example.N:Example[0]
+                                  <Test.Hspec.Expectations.Expectation>_N)))
+                   Main.main50 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+bf6d041a093b7e3563ee96479e161778
+  main5 ::
+    Test.Hspec.Core.Tree.Tree
+      (Test.Hspec.Core.Example.ActionWith ())
+      (Test.Hspec.Core.Tree.Item ())
+  {- Strictness: m1,
+     Unfolding: (Test.Hspec.Core.Tree.Node
+                   @ (Test.Hspec.Core.Example.ActionWith ())
+                   @ (Test.Hspec.Core.Tree.Item ())
+                   Main.main96
+                   Main.main6) -}
+a6dc23cf75aae9fc482c150483c86ce6
+  main50 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (eta2 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case CollatzConjecture.collatz Main.main54 of wild {
+                   GHC.Base.Nothing -> Main.main53 eta2
+                   GHC.Base.Just a1
+                   -> case GHC.Integer.Type.eqInteger#
+                             a1
+                             Main.main52 of wild1 { DEFAULT ->
+                      case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild1 of wild2 {
+                        GHC.Types.False -> Main.main16 wild eta2 Main.main51
+                        GHC.Types.True -> (# eta2, GHC.Tuple.() #) } } }) -}
+26b2f2855b1a00636a95e3ff15964ab6
+  main51 :: GHC.Base.Maybe GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just
+                   @ GHC.Integer.Type.Integer
+                   Main.main52) -}
+4750f67a4de6833c69423c8fd2ccc6d0
+  main52 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (152) -}
+b0e57022133a23d5b9f21e4a12d21d06
+  main53 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <B,U>x -}
+b889dd481c480b4a498d53123b035eaa
+  main54 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (1000000) -}
+349caf7c8314d658e627b813ce49530f
+  main55 :: [GHC.Types.Char]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   Main.main58
+                   Main.main56) -}
+3a544c5c839a820a5087c2654b62b3fc
+  main56 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main57) -}
+912bb91ed6b5f1ef67ae156d7b53d85e
+  main57 :: GHC.Prim.Addr#
+  {- HasNoCafRefs,
+     Unfolding: ("arge number of even and odd steps"#) -}
+929afddea1c49f081a07653b2f84352c
+  main58 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# 'L'#) -}
+625cd6e48b71b08fc80b716bbcbdd62d
+  main59 ::
+    [Test.Hspec.Core.Tree.SpecTree
+       (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Test.Hspec.Core.Tree.SpecTree
+                        (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+                   Main.main60
+                   (GHC.Types.[]
+                      @ (Test.Hspec.Core.Tree.SpecTree
+                           (Test.Hspec.Core.Example.Arg
+                              Test.Hspec.Expectations.Expectation)))) -}
+e7b8e512b6191cebb8d4a7deb1a54472
+  main6 ::
+    [Test.Hspec.Core.Tree.Tree
+       (Test.Hspec.Core.Example.ActionWith ())
+       (Test.Hspec.Core.Tree.Item ())]
+  {- Unfolding: (GHC.Base.++
+                   @ (Test.Hspec.Core.Tree.Tree
+                        (Test.Hspec.Core.Example.ActionWith ())
+                        (Test.Hspec.Core.Tree.Item ()))
+                   Main.main85
+                     `cast`
+                   (Nth:1
+                        (Nth:3
+                             (Nth:3
+                                  (Trans
+                                       (Sym (GHC.Types.N:IO[0]
+                                                 <((),
+                                                   [Test.Hspec.Core.Tree.SpecTree
+                                                      (Test.Hspec.Core.Example.Arg
+                                                         Test.Hspec.Expectations.Expectation)])>_R))
+                                       (Trans
+                                            (Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                      <[Test.Hspec.Core.Tree.SpecTree
+                                                          (Test.Hspec.Core.Example.Arg
+                                                             Test.Hspec.Expectations.Expectation)]>_N
+                                                      <GHC.Types.IO>_R
+                                                      <()>_N))
+                                            (Trans
+                                                 (Sym (Test.Hspec.Core.Spec.Monad.N:SpecM[0]
+                                                           (Sym (Test.Hspec.Core.Example.D:R:ArgIO[0]))) <()>_N)
+                                                 (Trans
+                                                      (Nth:2
+                                                           (Trans
+                                                                (Test.Hspec.Core.Spec.Monad.N:SpecM[0]
+                                                                     <()>_N <()>_N
+                                                                 ->_R Test.Hspec.Core.Spec.Monad.N:SpecM[0]
+                                                                          <()>_N <()>_N
+                                                                 ->_R Test.Hspec.Core.Spec.Monad.N:SpecM[0]
+                                                                          <()>_N <()>_N)
+                                                                (<Control.Monad.Trans.Writer.Lazy.WriterT
+                                                                    [Test.Hspec.Core.Tree.SpecTree
+                                                                       ()]
+                                                                    GHC.Types.IO
+                                                                    ()>_R
+                                                                 ->_R <Control.Monad.Trans.Writer.Lazy.WriterT
+                                                                         [Test.Hspec.Core.Tree.SpecTree
+                                                                            ()]
+                                                                         GHC.Types.IO
+                                                                         ()>_R
+                                                                 ->_R Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                                          <[Test.Hspec.Core.Tree.SpecTree
+                                                                              ()]>_N
+                                                                          <GHC.Types.IO>_R
+                                                                          <()>_N)))
+                                                      (Trans
+                                                           (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                                <[Test.Hspec.Core.Tree.SpecTree
+                                                                    ()]>_N
+                                                                <GHC.Types.IO>_R
+                                                                <()>_N)
+                                                           (GHC.Types.N:IO[0]
+                                                                <((),
+                                                                  [Test.Hspec.Core.Tree.SpecTree
+                                                                     ()])>_R)))))))))
+                   Main.main7) -}
+1e146df09ae8f2fcf575aa4b55877d2d
+  main60 ::
+    Test.Hspec.Core.Tree.Tree
+      (Test.Hspec.Core.Example.ActionWith
+         (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+      (Test.Hspec.Core.Tree.Item
+         (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+  {- Strictness: m3,
+     Unfolding: (Test.Hspec.Core.Tree.Leaf
+                   @ (Test.Hspec.Core.Example.ActionWith
+                        (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+                   @ (Test.Hspec.Core.Tree.Item
+                        (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+                   Main.main61) -}
+acc9e8b0c780b5aaa836a73a47206ec9
+  main61 ::
+    Test.Hspec.Core.Tree.Item
+      (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)
+  {- Strictness: m,
+     Unfolding: (Test.Hspec.Core.Tree.Item
+                   @ (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)
+                   Main.main68
+                   Main.main18
+                   GHC.Types.False
+                   Main.main62
+                     `cast`
+                   (<Test.Hspec.Core.Example.Params>_R
+                    ->_R <Test.Hspec.Core.Example.ActionWith
+                            (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)
+                          -> GHC.Types.IO ()>_R
+                    ->_R <Test.Hspec.Core.Example.ProgressCallback>_R
+                    ->_R Sym (GHC.Types.N:IO[0]
+                                  <Data.Either.Either
+                                     GHC.Exception.SomeException
+                                     Test.Hspec.Core.Example.Result>_R))) -}
+4b16be2a2f4e54cc1d5dbf9f01e4e7d2
+  main62 ::
+    Test.Hspec.Core.Example.Params
+    -> (Test.Hspec.Core.Example.ActionWith
+          (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)
+        -> GHC.Types.IO ())
+    -> Test.Hspec.Core.Example.ProgressCallback
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Either.Either
+            GHC.Exception.SomeException Test.Hspec.Core.Example.Result #)
+  {- Arity: 4,
+     Unfolding: (Test.Hspec.Core.Example.safeEvaluateExample1
+                   @ Test.Hspec.Expectations.Expectation
+                   Test.Hspec.Core.Example.$fExampleIO1
+                     `cast`
+                   (Trans
+                        (<Test.Hspec.Expectations.Expectation>_R
+                         ->_R <Test.Hspec.Core.Example.Params>_R
+                         ->_R <(Test.Hspec.Core.Example.Arg
+                                  Test.Hspec.Expectations.Expectation
+                                -> GHC.Types.IO ())
+                               -> GHC.Types.IO ()>_R
+                         ->_R <Test.Hspec.Core.Example.ProgressCallback>_R
+                         ->_R Sym (GHC.Types.N:IO[0] <Test.Hspec.Core.Example.Result>_R))
+                        (Sym (Test.Hspec.Core.Example.N:Example[0]
+                                  <Test.Hspec.Expectations.Expectation>_N)))
+                   Main.main63 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+7228208f0a2337289edf4ace42fc7e3a
+  main63 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (eta2 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case CollatzConjecture.collatz Main.main67 of wild {
+                   GHC.Base.Nothing -> Main.main66 eta2
+                   GHC.Base.Just a1
+                   -> case GHC.Integer.Type.eqInteger#
+                             a1
+                             Main.main65 of wild1 { DEFAULT ->
+                      case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild1 of wild2 {
+                        GHC.Types.False -> Main.main16 wild eta2 Main.main64
+                        GHC.Types.True -> (# eta2, GHC.Tuple.() #) } } }) -}
+50307ab02acec321a5e791022617518f
+  main64 :: GHC.Base.Maybe GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just
+                   @ GHC.Integer.Type.Integer
+                   Main.main65) -}
+45a84e05084b7fb75d02c451fdfb966b
+  main65 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (9) -}
+5645f7ef0cea11a1c1d8b9b6359fb4ce
+  main66 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <B,U>x -}
+1019a0095c9b048e812239dd816084f9
+  main67 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (12) -}
+96815b7339a39c1fe10fce018bd1ac49
+  main68 :: [GHC.Types.Char]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   Main.main71
+                   Main.main69) -}
+f1426baa4d4ef8ac1ec24b8d4738f668
+  main69 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main70) -}
+75cb048af6dccf8f020b512b18ce4987
+  main7 ::
+    [Test.Hspec.Core.Tree.Tree
+       (Test.Hspec.Core.Example.ActionWith ())
+       (Test.Hspec.Core.Tree.Item ())]
+  {- Unfolding: (GHC.Base.++
+                   @ (Test.Hspec.Core.Tree.Tree
+                        (Test.Hspec.Core.Example.ActionWith ())
+                        (Test.Hspec.Core.Tree.Item ()))
+                   Main.main72
+                     `cast`
+                   (Nth:1
+                        (Nth:3
+                             (Nth:3
+                                  (Trans
+                                       (Sym (GHC.Types.N:IO[0]
+                                                 <((),
+                                                   [Test.Hspec.Core.Tree.SpecTree
+                                                      (Test.Hspec.Core.Example.Arg
+                                                         Test.Hspec.Expectations.Expectation)])>_R))
+                                       (Trans
+                                            (Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                      <[Test.Hspec.Core.Tree.SpecTree
+                                                          (Test.Hspec.Core.Example.Arg
+                                                             Test.Hspec.Expectations.Expectation)]>_N
+                                                      <GHC.Types.IO>_R
+                                                      <()>_N))
+                                            (Trans
+                                                 (Sym (Test.Hspec.Core.Spec.Monad.N:SpecM[0]
+                                                           (Sym (Test.Hspec.Core.Example.D:R:ArgIO[0]))) <()>_N)
+                                                 (Trans
+                                                      (Nth:2
+                                                           (Trans
+                                                                (Test.Hspec.Core.Spec.Monad.N:SpecM[0]
+                                                                     <()>_N <()>_N
+                                                                 ->_R Test.Hspec.Core.Spec.Monad.N:SpecM[0]
+                                                                          <()>_N <()>_N
+                                                                 ->_R Test.Hspec.Core.Spec.Monad.N:SpecM[0]
+                                                                          <()>_N <()>_N)
+                                                                (<Control.Monad.Trans.Writer.Lazy.WriterT
+                                                                    [Test.Hspec.Core.Tree.SpecTree
+                                                                       ()]
+                                                                    GHC.Types.IO
+                                                                    ()>_R
+                                                                 ->_R <Control.Monad.Trans.Writer.Lazy.WriterT
+                                                                         [Test.Hspec.Core.Tree.SpecTree
+                                                                            ()]
+                                                                         GHC.Types.IO
+                                                                         ()>_R
+                                                                 ->_R Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                                          <[Test.Hspec.Core.Tree.SpecTree
+                                                                              ()]>_N
+                                                                          <GHC.Types.IO>_R
+                                                                          <()>_N)))
+                                                      (Trans
+                                                           (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                                <[Test.Hspec.Core.Tree.SpecTree
+                                                                    ()]>_N
+                                                                <GHC.Types.IO>_R
+                                                                <()>_N)
+                                                           (GHC.Types.N:IO[0]
+                                                                <((),
+                                                                  [Test.Hspec.Core.Tree.SpecTree
+                                                                     ()])>_R)))))))))
+                   Main.main8) -}
+dc33952151bbeab9a2b9da639c6a043f
+  main70 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("ven and odd steps"#) -}
+f36988a23bd985e85758ea0d970e2a98
+  main71 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# 'e'#) -}
+78c5f91f0720c8668b40adc6415890bb
+  main72 ::
+    [Test.Hspec.Core.Tree.SpecTree
+       (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Test.Hspec.Core.Tree.SpecTree
+                        (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+                   Main.main73
+                   (GHC.Types.[]
+                      @ (Test.Hspec.Core.Tree.SpecTree
+                           (Test.Hspec.Core.Example.Arg
+                              Test.Hspec.Expectations.Expectation)))) -}
+30a50de7f2698f805ede18e553825608
+  main73 ::
+    Test.Hspec.Core.Tree.Tree
+      (Test.Hspec.Core.Example.ActionWith
+         (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+      (Test.Hspec.Core.Tree.Item
+         (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+  {- Strictness: m3,
+     Unfolding: (Test.Hspec.Core.Tree.Leaf
+                   @ (Test.Hspec.Core.Example.ActionWith
+                        (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+                   @ (Test.Hspec.Core.Tree.Item
+                        (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+                   Main.main74) -}
+f805824e957569ed66b466763b728b02
+  main74 ::
+    Test.Hspec.Core.Tree.Item
+      (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)
+  {- Strictness: m,
+     Unfolding: (Test.Hspec.Core.Tree.Item
+                   @ (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)
+                   Main.main81
+                   Main.main18
+                   GHC.Types.False
+                   Main.main75
+                     `cast`
+                   (<Test.Hspec.Core.Example.Params>_R
+                    ->_R <Test.Hspec.Core.Example.ActionWith
+                            (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)
+                          -> GHC.Types.IO ()>_R
+                    ->_R <Test.Hspec.Core.Example.ProgressCallback>_R
+                    ->_R Sym (GHC.Types.N:IO[0]
+                                  <Data.Either.Either
+                                     GHC.Exception.SomeException
+                                     Test.Hspec.Core.Example.Result>_R))) -}
+33362787e624311be8811708c9a362a1
+  main75 ::
+    Test.Hspec.Core.Example.Params
+    -> (Test.Hspec.Core.Example.ActionWith
+          (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)
+        -> GHC.Types.IO ())
+    -> Test.Hspec.Core.Example.ProgressCallback
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Either.Either
+            GHC.Exception.SomeException Test.Hspec.Core.Example.Result #)
+  {- Arity: 4,
+     Unfolding: (Test.Hspec.Core.Example.safeEvaluateExample1
+                   @ Test.Hspec.Expectations.Expectation
+                   Test.Hspec.Core.Example.$fExampleIO1
+                     `cast`
+                   (Trans
+                        (<Test.Hspec.Expectations.Expectation>_R
+                         ->_R <Test.Hspec.Core.Example.Params>_R
+                         ->_R <(Test.Hspec.Core.Example.Arg
+                                  Test.Hspec.Expectations.Expectation
+                                -> GHC.Types.IO ())
+                               -> GHC.Types.IO ()>_R
+                         ->_R <Test.Hspec.Core.Example.ProgressCallback>_R
+                         ->_R Sym (GHC.Types.N:IO[0] <Test.Hspec.Core.Example.Result>_R))
+                        (Sym (Test.Hspec.Core.Example.N:Example[0]
+                                  <Test.Hspec.Expectations.Expectation>_N)))
+                   Main.main76 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+c2b37fde81f33b8ff301a8b5369a9833
+  main76 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (eta2 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case CollatzConjecture.collatz Main.main80 of wild {
+                   GHC.Base.Nothing -> Main.main79 eta2
+                   GHC.Base.Just a1
+                   -> case GHC.Integer.Type.eqInteger#
+                             a1
+                             Main.main78 of wild1 { DEFAULT ->
+                      case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild1 of wild2 {
+                        GHC.Types.False -> Main.main16 wild eta2 Main.main77
+                        GHC.Types.True -> (# eta2, GHC.Tuple.() #) } } }) -}
+25f802752545c8ec3a2abacb643255a8
+  main77 :: GHC.Base.Maybe GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just
+                   @ GHC.Integer.Type.Integer
+                   Main.main78) -}
+8c0aa8b0fb64ac7158e22d11a9074676
+  main78 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (4) -}
+c9cd26c355372e19ccc814992bf921aa
+  main79 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <B,U>x -}
+2109b06e4778a53e5836d4af889bd3c4
+  main8 ::
+    [Test.Hspec.Core.Tree.Tree
+       (Test.Hspec.Core.Example.ActionWith ())
+       (Test.Hspec.Core.Tree.Item ())]
+  {- Unfolding: (GHC.Base.++
+                   @ (Test.Hspec.Core.Tree.Tree
+                        (Test.Hspec.Core.Example.ActionWith ())
+                        (Test.Hspec.Core.Tree.Item ()))
+                   Main.main59
+                     `cast`
+                   (Nth:1
+                        (Nth:3
+                             (Nth:3
+                                  (Trans
+                                       (Sym (GHC.Types.N:IO[0]
+                                                 <((),
+                                                   [Test.Hspec.Core.Tree.SpecTree
+                                                      (Test.Hspec.Core.Example.Arg
+                                                         Test.Hspec.Expectations.Expectation)])>_R))
+                                       (Trans
+                                            (Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                      <[Test.Hspec.Core.Tree.SpecTree
+                                                          (Test.Hspec.Core.Example.Arg
+                                                             Test.Hspec.Expectations.Expectation)]>_N
+                                                      <GHC.Types.IO>_R
+                                                      <()>_N))
+                                            (Trans
+                                                 (Sym (Test.Hspec.Core.Spec.Monad.N:SpecM[0]
+                                                           (Sym (Test.Hspec.Core.Example.D:R:ArgIO[0]))) <()>_N)
+                                                 (Trans
+                                                      (Nth:2
+                                                           (Trans
+                                                                (Test.Hspec.Core.Spec.Monad.N:SpecM[0]
+                                                                     <()>_N <()>_N
+                                                                 ->_R Test.Hspec.Core.Spec.Monad.N:SpecM[0]
+                                                                          <()>_N <()>_N
+                                                                 ->_R Test.Hspec.Core.Spec.Monad.N:SpecM[0]
+                                                                          <()>_N <()>_N)
+                                                                (<Control.Monad.Trans.Writer.Lazy.WriterT
+                                                                    [Test.Hspec.Core.Tree.SpecTree
+                                                                       ()]
+                                                                    GHC.Types.IO
+                                                                    ()>_R
+                                                                 ->_R <Control.Monad.Trans.Writer.Lazy.WriterT
+                                                                         [Test.Hspec.Core.Tree.SpecTree
+                                                                            ()]
+                                                                         GHC.Types.IO
+                                                                         ()>_R
+                                                                 ->_R Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                                          <[Test.Hspec.Core.Tree.SpecTree
+                                                                              ()]>_N
+                                                                          <GHC.Types.IO>_R
+                                                                          <()>_N)))
+                                                      (Trans
+                                                           (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                                <[Test.Hspec.Core.Tree.SpecTree
+                                                                    ()]>_N
+                                                                <GHC.Types.IO>_R
+                                                                <()>_N)
+                                                           (GHC.Types.N:IO[0]
+                                                                <((),
+                                                                  [Test.Hspec.Core.Tree.SpecTree
+                                                                     ()])>_R)))))))))
+                   Main.main9) -}
+1d6fb380f6d608e246fcaa02a612b4cd
+  main80 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (16) -}
+3825d1cae0ea8892e0992d444e3c418b
+  main81 :: [GHC.Types.Char]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   Main.main84
+                   Main.main82) -}
+085192ec65873d53b62b1cdd1fd7b93b
+  main82 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main83) -}
+9a481b11d23f6813c8d9a829b1afd4de
+  main83 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("ivide if even"#) -}
+69fd6fb6429452101e9c9a086820fb16
+  main84 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# 'd'#) -}
+e706e070b8fdce3e8696c86c72f82821
+  main85 ::
+    [Test.Hspec.Core.Tree.SpecTree
+       (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (Test.Hspec.Core.Tree.SpecTree
+                        (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+                   Main.main86
+                   (GHC.Types.[]
+                      @ (Test.Hspec.Core.Tree.SpecTree
+                           (Test.Hspec.Core.Example.Arg
+                              Test.Hspec.Expectations.Expectation)))) -}
+d732319fb10bba2ae3a6863713f955b5
+  main86 ::
+    Test.Hspec.Core.Tree.Tree
+      (Test.Hspec.Core.Example.ActionWith
+         (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+      (Test.Hspec.Core.Tree.Item
+         (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+  {- Strictness: m3,
+     Unfolding: (Test.Hspec.Core.Tree.Leaf
+                   @ (Test.Hspec.Core.Example.ActionWith
+                        (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+                   @ (Test.Hspec.Core.Tree.Item
+                        (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation))
+                   Main.main87) -}
+4c7a76f50d00544c758c41eab9e368bf
+  main87 ::
+    Test.Hspec.Core.Tree.Item
+      (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)
+  {- Strictness: m,
+     Unfolding: (Test.Hspec.Core.Tree.Item
+                   @ (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)
+                   Main.main93
+                   Main.main18
+                   GHC.Types.False
+                   Main.main88
+                     `cast`
+                   (<Test.Hspec.Core.Example.Params>_R
+                    ->_R <Test.Hspec.Core.Example.ActionWith
+                            (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)
+                          -> GHC.Types.IO ()>_R
+                    ->_R <Test.Hspec.Core.Example.ProgressCallback>_R
+                    ->_R Sym (GHC.Types.N:IO[0]
+                                  <Data.Either.Either
+                                     GHC.Exception.SomeException
+                                     Test.Hspec.Core.Example.Result>_R))) -}
+1e4b6dfbef98d1ed4626f1f7cfdab319
+  main88 ::
+    Test.Hspec.Core.Example.Params
+    -> (Test.Hspec.Core.Example.ActionWith
+          (Test.Hspec.Core.Example.Arg Test.Hspec.Expectations.Expectation)
+        -> GHC.Types.IO ())
+    -> Test.Hspec.Core.Example.ProgressCallback
+    -> GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld,
+          Data.Either.Either
+            GHC.Exception.SomeException Test.Hspec.Core.Example.Result #)
+  {- Arity: 4,
+     Unfolding: (Test.Hspec.Core.Example.safeEvaluateExample1
+                   @ Test.Hspec.Expectations.Expectation
+                   Test.Hspec.Core.Example.$fExampleIO1
+                     `cast`
+                   (Trans
+                        (<Test.Hspec.Expectations.Expectation>_R
+                         ->_R <Test.Hspec.Core.Example.Params>_R
+                         ->_R <(Test.Hspec.Core.Example.Arg
+                                  Test.Hspec.Expectations.Expectation
+                                -> GHC.Types.IO ())
+                               -> GHC.Types.IO ()>_R
+                         ->_R <Test.Hspec.Core.Example.ProgressCallback>_R
+                         ->_R Sym (GHC.Types.N:IO[0] <Test.Hspec.Core.Example.Result>_R))
+                        (Sym (Test.Hspec.Core.Example.N:Example[0]
+                                  <Test.Hspec.Expectations.Expectation>_N)))
+                   Main.main89 `cast` (Sym (GHC.Types.N:IO[0] <()>_R))) -}
+b93d8c199e195973da2269cf50eec0a9
+  main89 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <S,U>,
+     Unfolding: (\ (eta2 :: GHC.Prim.State# GHC.Prim.RealWorld) ->
+                 case CollatzConjecture.collatz Main.main92 of wild {
+                   GHC.Base.Nothing -> Main.main91 eta2
+                   GHC.Base.Just a1
+                   -> case GHC.Integer.Type.eqInteger#
+                             a1
+                             Main.main41 of wild1 { DEFAULT ->
+                      case GHC.Prim.tagToEnum# @ GHC.Types.Bool wild1 of wild2 {
+                        GHC.Types.False -> Main.main16 wild eta2 Main.main90
+                        GHC.Types.True -> (# eta2, GHC.Tuple.() #) } } }) -}
+ddbdf8f338f28be98d4e0b972f106cef
+  main9 ::
+    [Test.Hspec.Core.Tree.Tree
+       (Test.Hspec.Core.Example.ActionWith ())
+       (Test.Hspec.Core.Tree.Item ())]
+  {- Unfolding: (GHC.Base.++
+                   @ (Test.Hspec.Core.Tree.Tree
+                        (Test.Hspec.Core.Example.ActionWith ())
+                        (Test.Hspec.Core.Tree.Item ()))
+                   Main.main46
+                     `cast`
+                   (Nth:1
+                        (Nth:3
+                             (Nth:3
+                                  (Trans
+                                       (Sym (GHC.Types.N:IO[0]
+                                                 <((),
+                                                   [Test.Hspec.Core.Tree.SpecTree
+                                                      (Test.Hspec.Core.Example.Arg
+                                                         Test.Hspec.Expectations.Expectation)])>_R))
+                                       (Trans
+                                            (Sym (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                      <[Test.Hspec.Core.Tree.SpecTree
+                                                          (Test.Hspec.Core.Example.Arg
+                                                             Test.Hspec.Expectations.Expectation)]>_N
+                                                      <GHC.Types.IO>_R
+                                                      <()>_N))
+                                            (Trans
+                                                 (Sym (Test.Hspec.Core.Spec.Monad.N:SpecM[0]
+                                                           (Sym (Test.Hspec.Core.Example.D:R:ArgIO[0]))) <()>_N)
+                                                 (Trans
+                                                      (Nth:2
+                                                           (Trans
+                                                                (Test.Hspec.Core.Spec.Monad.N:SpecM[0]
+                                                                     <()>_N <()>_N
+                                                                 ->_R Test.Hspec.Core.Spec.Monad.N:SpecM[0]
+                                                                          <()>_N <()>_N
+                                                                 ->_R Test.Hspec.Core.Spec.Monad.N:SpecM[0]
+                                                                          <()>_N <()>_N)
+                                                                (<Control.Monad.Trans.Writer.Lazy.WriterT
+                                                                    [Test.Hspec.Core.Tree.SpecTree
+                                                                       ()]
+                                                                    GHC.Types.IO
+                                                                    ()>_R
+                                                                 ->_R <Control.Monad.Trans.Writer.Lazy.WriterT
+                                                                         [Test.Hspec.Core.Tree.SpecTree
+                                                                            ()]
+                                                                         GHC.Types.IO
+                                                                         ()>_R
+                                                                 ->_R Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                                          <[Test.Hspec.Core.Tree.SpecTree
+                                                                              ()]>_N
+                                                                          <GHC.Types.IO>_R
+                                                                          <()>_N)))
+                                                      (Trans
+                                                           (Control.Monad.Trans.Writer.Lazy.N:WriterT[0]
+                                                                <[Test.Hspec.Core.Tree.SpecTree
+                                                                    ()]>_N
+                                                                <GHC.Types.IO>_R
+                                                                <()>_N)
+                                                           (GHC.Types.N:IO[0]
+                                                                <((),
+                                                                  [Test.Hspec.Core.Tree.SpecTree
+                                                                     ()])>_R)))))))))
+                   Main.main10) -}
+b49a1d30c6ea6092bd35fea9aa84f9ed
+  main90 :: GHC.Base.Maybe GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Base.Just
+                   @ GHC.Integer.Type.Integer
+                   Main.main41) -}
+04805a8a6c57e94f58a977c932998507
+  main91 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <B,U>x -}
+810b85bcbd3e577569ddd972ecefe3d5
+  main92 :: GHC.Integer.Type.Integer
+  {- HasNoCafRefs, Unfolding: (1) -}
+8d7d3c0b51516e3937f13041e4728175
+  main93 :: [GHC.Types.Char]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   Main.main45
+                   Main.main94) -}
+13c55e27b03afdd14c7a029023b2b321
+  main94 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main95) -}
+af5fe93ebdc31be0c5b558075178c374
+  main95 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("ero steps for one"#) -}
+e4ee016d988c36f75c0a9b98b7f91f23
+  main96 :: [GHC.Types.Char]
+  {- Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ GHC.Types.Char
+                   Main.main99
+                   Main.main97) -}
+0fd4830eff6e60eefea33072a5635497
+  main97 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# Main.main98) -}
+f012f73a5c60e539c69ea8e4138ba3b7
+  main98 :: GHC.Prim.Addr#
+  {- HasNoCafRefs, Unfolding: ("ollatz"#) -}
+03dfcf2ab682cb59f1fda7ccf1458a26
+  main99 :: GHC.Types.Char
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.C# 'c'#) -}
+eca8dff9d630b5fb2a00f6da2c10d1ed
+  number :: Main.Case -> GHC.Integer.Type.Integer
+  RecSel Left Main.Case
+  {- Arity: 1, HasNoCafRefs, Strictness: <S(LSL),1*U(A,1*U,A)>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (ds :: Main.Case) ->
+                 case ds of wild { Main.Case ds1 ds2 ds3 -> ds2 }) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: none
+require own pkg trusted: False
+
