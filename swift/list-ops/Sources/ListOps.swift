@@ -29,7 +29,7 @@ class ListOps {
         return v
     }
     
-    class func length(_ i: [Int]) -> Int {
+    class func length<T>(_ i: [T]) -> Int {
         var v = 0
         for _ in i {
             v += 1
@@ -45,24 +45,29 @@ class ListOps {
         return v
     }
     
-    class func foldLeft(_ i: [Int], accumulated: Int, combine:((Int,Int)->Int)) -> Int {
+    class func foldLeft(_ i: [Int], accumulated: Int, combine:(Int,Int)->Int) -> Int {
         var v = accumulated
-
+        for item in i {
+            v = combine(v, item)
+        }
         return v
     }
     
     class func foldRight<T>(_ i: [T], accumulated: T, combine:(T,T)->T) -> T {
-        return accumulated
+        var v = accumulated
+        for item in reverse(i) {
+            v = combine(item, v)
+        }
+        return v
     }
     
-    class func combine(_ i: [Int], accumulated: Int, combine:((Int,Int)->Int)) -> Int {
-        return 0
-    }
-    
-    class func reverse(_ i: [Int]) -> [Int] {
+    class func reverse<T>(_ i: [T]) -> [T] {
         let lengthI = length(i)
-        guard lengthI > 0 else { return [Int]() }
-        var v = [Int]()
+        guard lengthI > 0 else { return i }
+        var v = [T]()
+        for index in stride(from: lengthI - 1, to: -1, by: -1) {
+            v.append(i[index])
+        }
         return v
     }
 }
